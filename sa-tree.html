@@ -1,0 +1,27 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+Element providing solution to no problem in particular.
+
+##### Example
+
+    <sa-tree></sa-tree>
+
+@element sa-tree
+@blurb Element providing solution to no problem in particular.
+@status alpha
+@homepage http://lyuehh.github.io/sa-tree
+-->
+
+<script src="jquery.js"></script>
+<script src="jquery.ztree.all-3.5.js"></script>
+
+<polymer-element name="sa-tree" attributes="selected treeid setting nodes">
+  <template>
+    <link rel="stylesheet" href="sa-tree.css">
+    <div id="ztreeContainer">
+      <div class="ztree" id="{{ treeid }}"></div>
+    </div>
+  </template>
+  <script src="sa-tree.js"></script>
+</polymer-element>

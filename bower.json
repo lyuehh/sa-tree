@@ -1,10 +1,12 @@
 {
   "name": "sa-tree",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "keywords": [
     "seed",
     "polymer",
-    "web-components"
+    "web-components",
+    "ztree",
+    "tree"
   ],
   "main": "sa-tree.html",
   "dependencies": {

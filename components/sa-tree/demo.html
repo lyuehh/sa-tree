@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sa-tree Demo</title>
+    <script src="../webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="sa-tree.html">
+    <link rel="import" href="../core-signals/core-signals.html">
+  </head>
+  <body unresolved>
+
+      <polymer-element name="app-tree">
+          <template>
+              <sa-sidebar selected="tree">
+                  <div class="title">Tree</div>
+                  <div class="content">
+                      <div class="wrapper" layout horizontal>
+                          <sa-tree treeid="{{ treeid }}" setting="{{ setting }}" nodes = "{{ nodes }}"></sa-tree>
+                          <div class="info">
+                              当前节点: {{ currentNode.name }}
+                          </div>
+                      </div>
+                      <core-signals on-core-signal-node-change="{{ nodeChange }}"></core-signals>
+                  </div>
+              </sa-sidebar>
+          </template>
+          <script src="demo.js"></script>
+      </polymer-element>
+
+      <app-tree></app-tree>
+  </body>
+</html>
